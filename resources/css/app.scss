@@ -1,0 +1,242 @@
+.website {
+    @apply bg-gray-50 dark:bg-darkbg-primary w-full min-h-screen;
+
+    nav {
+        @apply w-full h-20 bg-menuBG text-white flex justify-between items-center gap-10 px-20;
+
+        .logo {
+            @apply h-full py-2;
+        }
+
+        ul {
+            @apply flex justify-between items-center gap-5;
+
+            li {
+                a {
+                    @apply flex flex-col justify-center items-center text-white opacity-80 text-sm gap-1 text-shadow shadow-black hover-animate;
+
+                    svg {
+                        @apply text-xs;
+                    }
+
+                    &.menu-active,
+                    &:hover {
+                        @apply text-webPrimary scale-110 shadow-secondary;
+                    }
+                }
+            }
+
+            .buttons {
+                .nav-btn {
+                    @apply w-[183px] h-[40px] text-lg hover-animate;
+
+                    &.login-btn {
+                        @apply bg-loginBG1;
+
+                        &:hover {
+                            @apply bg-loginBG;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        @apply w-full py-[10px] relative bg-black overflow-hidden mb-20 shadow-2xl;
+
+        &::before {
+            @apply content-[''] w-full h-[10px] bg-borderBG absolute top-0 left-0 z-20;
+        }
+
+        &::after {
+            @apply content-[''] w-full h-[10px] bg-borderBG absolute bottom-0 left-0 z-20;
+        }
+
+        .header-overlay {
+            @apply w-full h-full absolute top-0 left-0 bg-transparent;
+            box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.8)
+        }
+    }
+
+    footer {
+        @apply w-full h-20 bg-menuBG text-white flex justify-between items-center gap-10 px-20 relative;
+
+        &::before {
+            @apply content-[''] w-full h-[10px] bg-borderBG absolute -top-[10px] left-0 z-20;
+        }
+    }
+}
+
+form {
+    @apply w-full grid grid-cols-1 gap-3;
+}
+
+.active-menu {
+    @apply w-full bg-gray-100 dark:bg-darkbg-secondary text-primary font-bold relative transition-none #{!important};
+
+    &:before {
+        @apply content-[''] absolute top-[calc(-1*calc(2*25px))] ltr:right-0 rtl:left-0 w-[50px] h-[50px] rounded-full;
+        box-shadow: calc(1 * 50px * 0.5) calc(50px * 0.5) #f3f4f6;
+    }
+
+    &:after {
+        @apply content-['']  absolute bottom-[calc(-1*calc(2*25px))] ltr:right-0 rtl:left-0 w-[50px] h-[50px] rounded-full;
+        box-shadow: calc(1 * 50px * 0.5) calc(-1 * 50px * 0.5) #f3f4f6;
+    }
+}
+
+.hover-animate {
+    @apply transition-all duration-300 ease-linear;
+}
+
+:lang(ar) {
+    .active-menu {
+        &:before {
+            box-shadow: calc(-1 * 50px * 0.5) calc(50px * 0.5) #f3f4f6;
+        }
+
+        &:after {
+            box-shadow: calc(-1 * 50px * 0.5) calc(-1 * 50px * 0.5) #f3f4f6;
+        }
+    }
+}
+
+.dark {
+    .active-menu {
+        &:before {
+            box-shadow: calc(1 * 50px * 0.5) calc(50px * 0.5) #071426;
+        }
+
+        &:after {
+            box-shadow: calc(1 * 50px * 0.5) calc(-1 * 50px * 0.5) #071426;
+        }
+    }
+    :lang(ar) {
+        .active-menu {
+            &:before {
+                box-shadow: calc(-1 * 50px * 0.5) calc(50px * 0.5) #071426;
+            }
+
+            &:after {
+                box-shadow: calc(-1 * 50px * 0.5) calc(-1 * 50px * 0.5) #071426;
+            }
+        }
+    }
+}
+
+.anchor-component {
+    @apply text-primary-light dark:text-primary-dark inline-block hover:scale-110 opacity-90 hover:opacity-100 transition duration-300 ease-in-out;
+}
+
+.hide-sidebar {
+    .page-container {
+        @apply w-full ltr:left-0 rtl:right-0;
+    }
+
+    .sidebar-container {
+        @apply ltr:-left-64 rtl:-right-64;
+    }
+}
+
+.sidebar-container {
+    @apply hidden lg:flex;
+
+    .sidebar-logo {
+        @apply w-full h-16 flex justify-center items-center gap-3 p-4 bg-darkbg-primary border-b border-border-dark;
+    }
+}
+
+.p-sidebar {
+    .p-sidebar-content {
+        .sidebar-container {
+            @apply w-full flex border-none;
+
+            .sidebar-logo {
+                @apply justify-start;
+            }
+        }
+    }
+}
+
+.panel-content {
+    @apply p-5 shadow grid grid-cols-1 gap-5 w-full dark:text-white bg-white dark:bg-darkbg-primary rounded-[8px] border-border-light dark:border-border-dark border;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.nav-btns {
+    --border: 2px;
+    --slant: 0.7em;
+    --color: #debe73;
+    --hoverColor: #fff;
+
+    text-shadow: 0px 3px 5px rgb(0 0 0 / 50%);
+    padding: 0.5em 1.5em;
+    border: none;
+    cursor: pointer;
+    color: var(--color);
+    background: linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%)
+            top right,
+        linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3 * var(--border))
+        calc(var(--slant) + 1.3 * var(--border));
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 200px inset var(--s, #0000),
+        0 0 0 var(--border) inset var(--color);
+    clip-path: polygon(
+        0 0,
+        calc(100% - var(--slant)) 0,
+        100% var(--slant),
+        100% 100%,
+        var(--slant) 100%,
+        0 calc(100% - var(--slant))
+    );
+    transition: color var(--t, 0.3s), background-size 0.3s;
+
+    &:hover,
+    &:active {
+        background-size: 100% 100%;
+        color: var(--hoverColor);
+    }
+}
+
+.swiper {
+    @apply h-full flex  justify-center items-center #{!important};
+
+    .swiper-wrapper {
+        @apply h-full #{!important};
+    }
+
+    .swiper-button-prev {
+        @apply text-webPrimary px-10;
+    }
+
+    .swiper-button-next {
+        @apply text-webPrimary px-10;
+    }
+
+    .swiper-pagination {
+        @apply bottom-20 #{!important};
+
+        .swiper-pagination-bullet {
+            @apply w-4 h-4 rounded rotate-45 bg-white;
+
+            &.swiper-pagination-bullet-active {
+                @apply bg-webPrimary;
+            }
+        }
+    }
+}
