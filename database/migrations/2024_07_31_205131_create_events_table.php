@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->nullable();
             $table->string('slug');
             $table->enum('type', ['Server Events', 'Boss Monsters', 'Server Quests'])->default('Server Events');
             $table->json('name');

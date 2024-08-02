@@ -2,6 +2,8 @@
 
 return [
 
+    'default_url' => 'images/default.png',
+
     /*
     |--------------------------------------------------------------------------
     | Default Filesystem Disk

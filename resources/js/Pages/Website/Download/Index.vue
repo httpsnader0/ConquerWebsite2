@@ -4,7 +4,7 @@
 
 	<div class="w-full grid grid-cols-2 gap-5 px-20 mb-20">
 
-		<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+		<div class="panel-content">
 
 			<div class="w-full text-2xl flex justify-center items-center gap-2">
 				{{ $t('Download Client') }}
@@ -42,7 +42,7 @@
 
 		</div>
 
-		<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+		<div class="panel-content">
 
 			<div class="text-2xl flex justify-center items-center gap-2">
 				{{ $t('Download Full Patch') }}
@@ -89,9 +89,9 @@
 					v-for="(installation, index) in installations"
 					:key="index"
 				>
-					<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark text-center">
+					<div class="panel-content text-center">
 
-						<div class="rounded-2xl bg-border-light text-3xl w-14 h-14 flex justify-center items-center opacity-30 shadow-lg font-bold">
+						<div class="mx-auto rounded-2xl bg-border-light text-3xl w-14 h-14 flex justify-center items-center opacity-30 shadow-lg font-bold">
 							{{ index + 1 }}
 						</div>
 

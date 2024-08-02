@@ -177,6 +177,7 @@ import {
     faSearch,
     faFilter,
     faSpinner,
+    faChevronDown,
 
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -220,6 +221,7 @@ library.add(
     faSearch,
     faFilter,
     faSpinner,
+    faChevronDown,
 
     faFacebook,
     faTwitter,

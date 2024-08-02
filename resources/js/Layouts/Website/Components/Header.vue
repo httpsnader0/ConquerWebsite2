@@ -45,7 +45,7 @@
 
 			<span
 				class="text-6xl text-center text-webPrimary text-shadow-lg shadow-black uppercase font-bold"
-				v-html="$t(title)"
+				v-html="title"
 			/>
 
 		</div>
@@ -94,6 +94,8 @@
 			return 'Top Monster Points';
 		} else if (usePage().component.startsWith('Website/Ranking')) {
 			return 'General Statics';
+		} else if (usePage().component.startsWith('Website/Event/Show')) {
+			return usePage().props.event.name;
 		} else if (usePage().component.startsWith('Website/Event')) {
 			return 'Event & Tournaments';
 		} else if (usePage().component.startsWith('Website/News')) {

@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Traits\PaginatableTrait;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class Account extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, PaginatableTrait;
 
     public $timestamps = false;
 

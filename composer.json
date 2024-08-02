@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.9",
         "lorisleiva/laravel-actions": "^2.8",
         "maatwebsite/excel": "^3.1",
+        "opcodesio/log-viewer": "^3.10",
         "php-flasher/flasher-laravel": "^2.0",
         "rawilk/laravel-settings": "^3.3",
         "silber/bouncer": "^1.0",

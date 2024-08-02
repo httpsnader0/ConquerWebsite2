@@ -16,8 +16,6 @@
 		>
 			<ToggleButton
 				v-model="checked"
-				onIcon="pi pi-check"
-				offIcon="pi pi-times"
 				:onLabel="$t('I\'am Not a Robot')"
 				:offLabel="$t('I\'am Not a Robot')"
 				class="w-full"

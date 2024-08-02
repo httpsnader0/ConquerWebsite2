@@ -116,6 +116,8 @@
 
 	</Panel>
 
+	<pre>{{ model?.data?.translation }}</pre>
+
 </template>
 
 <script setup>
@@ -129,7 +131,7 @@
 	import { Ability } from '@/Classes/Ability';
 	import FormReward from "./FormReward.vue";
 	import Fieldset from 'primevue/fieldset';
-	import { icon } from '@fortawesome/fontawesome-svg-core';
+	import { onBeforeMount } from 'vue';
 
 	const props = defineProps({
 		model: Object,
@@ -138,16 +140,30 @@
 
 	const form = useForm({
 		type: props.model?.type,
-		name: props.model?.data?.translation?.name ?? { ar: '', en: '' },
-		time: props.model?.data?.translation?.time ?? { ar: '', en: '' },
-		rewards: [{
-			rewardName: { ar: '', en: '' },
-		}],
-		explain: props.model?.data?.translation?.explain ?? { ar: '', en: '' },
+		name: props.model?.translation?.name ?? { ar: '', en: '' },
+		time: props.model?.translation?.time ?? { ar: '', en: '' },
+		rewards: [],
+		explain: props.model?.translation?.explain ?? { ar: '', en: '' },
+	});
+
+	onBeforeMount(() => {
+		
+		if (!Object.keys(props.model).length) {
+			form.rewards.push({
+				rewardName: { ar: '', en: '' },
+			});
+		}
+
+		props.model?.rewards?.forEach((reward, index) => {
+			form.rewards.push({
+				rewardName: reward.translation?.name ?? { ar: '', en: '' },
+			})
+		});
+
 	});
 
 	const submit = () => {
-		form.post(!Object.keys(props.model).length ? route('dashboard.events.store') : route('dashboard.events.update', props.model?.id));
+		form.post(!Object.keys(props.model).length ? route('dashboard.events.store') : route('dashboard.events.update', props.model?.slug));
 	};
 
 	const addReward = () => {

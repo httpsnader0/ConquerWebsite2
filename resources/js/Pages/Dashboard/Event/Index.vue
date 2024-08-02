@@ -40,7 +40,7 @@
 					<template #body="slot">
 						<Anchor
 							:ability="Ability.EVENTS_SHOW"
-							:href="route('dashboard.events.show', slot.data.id)"
+							:href="route('dashboard.events.show', slot.data.slug)"
 							:label="slot.data.name"
 						/>
 					</template>
@@ -50,7 +50,7 @@
 					<template #body="slot">
 						<ToggleButton
 							:ability="Ability.EVENTS_CHANGE_STATUS"
-							:href="route('dashboard.events.change-status', slot.data.id)"
+							:href="route('dashboard.events.change-status', slot.data.slug)"
 							:id="slot.data.id"
 							:name="slot.data.name"
 							:status="slot.data.isActive"
@@ -63,11 +63,11 @@
 						<div class="flex justify-center items-center gap-3">
 							<EditButton
 								:ability="Ability.EVENTS_UPDATE"
-								:href="route('dashboard.events.edit', slot.data.id)"
+								:href="route('dashboard.events.edit', slot.data.slug)"
 							/>
 							<DeleteButton
 								:ability="Ability.EVENTS_DELETE"
-								:href="route('dashboard.events.delete', slot.data.id)"
+								:href="route('dashboard.events.delete', slot.data.slug)"
 								:id="slot.data.id"
 								:name="slot.data.name"
 							/>

@@ -1,7 +1,7 @@
 .website {
     @apply bg-gray-50 dark:bg-darkbg-primary w-full min-h-screen;
 
-    nav {
+    nav.web-menu {
         @apply w-full h-20 bg-menuBG text-white flex justify-between items-center gap-10 px-20;
 
         .logo {

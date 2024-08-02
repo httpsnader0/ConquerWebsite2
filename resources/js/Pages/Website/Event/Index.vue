@@ -5,116 +5,113 @@
 	<div class="w-full flex flex-col gap-10 px-20 mb-20">
 
 		<div>
-			<Title
-				:title="$t('Server Events')"
-				class="mt-10"
-			/>
+			<Title :title="$t('Server Events')" />
 
-			<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+			<div class="flex flex-wrap justify-center">
 
-				<div class="w-full border rounded-2xl shadow">
-					<table class="w-full text-center">
-						<tr class="border-b">
-							<th class="p-5 border-r w-1/4">{{ $t('Name') }}</th>
-							<th class="p-5 border-r w-1/4">{{ $t('Time') }}</th>
-							<th class="p-5 border-r w-2/4">{{ $t('Reward') }}</th>
-						</tr>
-						<tr
-							v-for="(event, index) in events"
-							:key="index"
-							:class="index != Object.keys(events).length - 1 ? 'border-b' : ''"
+				<template
+					v-for="(serverEvent, index) in serverEvents"
+					:key="index"
+				>
+
+					<div class="w-1/5 p-3">
+						<Link
+							:href="route('website.events.show', serverEvent.slug)"
+							class="w-full h-[300px] hover:scale-105 hover-animate border-4 border-border-light dark:border-border-dark text-sm rounded-2xl overflow-hidden relative p-5 flex flex-col justify-end items-center gap-3 text-start !shadow-lg"
 						>
-							<td class="p-3 border-r w-1/4">{{ event.name }}</td>
-							<td class="p-3 border-r w-1/4">{{ event.time }}</td>
-							<td class="p-3 border-r w-2/4">
-								<div class="flex justify-center items-center gap-1">
-									<template
-										v-for="(reward, rindex) in event.reward"
-										:key="rindex"
-									>
-										<Badge :value="reward" />
-									</template>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
+
+						<img
+							:src="serverEvent.image"
+							:alt="serverEvent.name"
+							class="absolute top-0 left-0 w-full h-full"
+						/>
+
+						<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black bg-opacity-50" />
+
+						<span
+							v-text="serverEvent.name"
+							class="text-primary text-2xl relative"
+						/>
+
+						</Link>
+					</div>
+
+				</template>
+
+			</div>
+
+		</div>
+
+		<div class="mt-10">
+			<Title :title="$t('Boss Monsters')" />
+
+			<div class="flex flex-wrap justify-center">
+
+				<template
+					v-for="(bossMonster, index) in bossMonsters"
+					:key="index"
+				>
+
+					<div class="w-1/5 p-3">
+						<Link
+							:href="route('website.events.show', bossMonster.slug)"
+							class="w-full h-[300px] hover:scale-105 hover-animate border-4 border-border-light dark:border-border-dark text-sm rounded-2xl overflow-hidden relative p-5 flex flex-col justify-end items-center gap-3 text-start !shadow-lg"
+						>
+
+						<img
+							:src="bossMonster.image"
+							:alt="bossMonster.name"
+							class="absolute top-0 left-0 w-full h-full"
+						/>
+
+						<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black bg-opacity-50" />
+
+						<span
+							v-text="bossMonster.name"
+							class="text-primary text-2xl relative"
+						/>
+
+						</Link>
+					</div>
+
+				</template>
 
 			</div>
 		</div>
 
-		<div>
-			<Title
-				:title="$t('Boss Monsters')"
-				class="mt-10"
-			/>
+		<div class="mt-10">
+			<Title :title="$t('Server Quests')" />
 
-			<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+			<div class="flex flex-wrap justify-center">
 
-				<div class="w-full border rounded-2xl shadow">
-					<table class="w-full text-center">
-						<tr class="border-b">
-							<th class="p-5 border-r w-1/4">{{ $t('Name') }}</th>
-							<th class="p-5 border-r w-1/4">{{ $t('Time') }}</th>
-							<th class="p-5 border-r w-2/4">{{ $t('Reward') }}</th>
-						</tr>
-						<tr
-							v-for="(boss, index) in booses"
-							:key="index"
-							:class="index != Object.keys(booses).length - 1 ? 'border-b' : ''"
+				<template
+					v-for="(serverQuest, index) in serverQuests"
+					:key="index"
+				>
+
+					<div class="w-1/5 p-3">
+						<Link
+							:href="route('website.events.show', serverQuest.slug)"
+							class="w-full h-[300px] hover:scale-105 hover-animate border-4 border-border-light dark:border-border-dark text-sm rounded-2xl overflow-hidden relative p-5 flex flex-col justify-end items-center gap-3 text-start !shadow-lg"
 						>
-							<td class="p-3 border-r w-1/4">{{ boss.name }}</td>
-							<td class="p-3 border-r w-1/4">{{ boss.time }}</td>
-							<td class="p-3 border-r w-2/4">
-								<div class="flex justify-center items-center gap-1">
-									<template
-										v-for="(reward, rindex) in boss.reward"
-										:key="rindex"
-									>
-										<Badge :value="reward" />
-									</template>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
 
-			</div>
-		</div>
+						<img
+							:src="serverQuest.image"
+							:alt="serverQuest.name"
+							class="absolute top-0 left-0 w-full h-full"
+						/>
 
-		<div>
-			<Title
-				:title="$t('Server Quests')"
-				class="mt-10"
-			/>
+						<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black bg-opacity-50" />
 
-			<div class="w-full bg-white p-10 flex flex-col justify-center items-center gap-5 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+						<span
+							v-text="serverQuest.name"
+							class="text-primary text-2xl relative"
+						/>
 
-				<div class="w-full border rounded-2xl shadow">
-					<table class="w-full text-center">
-						<tr class="border-b">
-							<th class="p-5 border-r w-1/4">{{ $t('Name') }}</th>
-							<th class="p-5 border-r w-3/4">{{ $t('Reward') }}</th>
-						</tr>
-						<tr
-							v-for="(quest, index) in quests"
-							:key="index"
-							:class="index != Object.keys(quests).length - 1 ? 'border-b' : ''"
-						>
-							<td class="p-3 border-r w-1/4">{{ quest.name }}</td>
-							<td class="p-3 border-r w-3/4">
-								<div class="flex justify-center items-center gap-1">
-									<template
-										v-for="(reward, rindex) in quest.reward"
-										:key="rindex"
-									>
-										<Badge :value="reward" />
-									</template>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
+						</Link>
+					</div>
+
+				</template>
 
 			</div>
 		</div>
@@ -128,117 +125,10 @@
 	import AppHead from '@/Components/Shared/AppHead.vue';
 	import Title from '@/Layouts/Website/Components/Title.vue';
 
-	const events = [
-		{
-			'name': 'Guild War',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-				'GoldPrize',
-				'Top GuildLeader / DeputyLeader',
-			],
-		},
-		{
-			'name': 'Elite PK',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-				'Top ElitePK',
-			],
-		},
-		{
-			'name': 'Team PK',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-			],
-		},
-		{
-			'name': 'Skill Team PK',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-			],
-		},
-		{
-			'name': 'Capture The Flag',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-				'2,000,000,000 Money',
-			],
-		},
-		{
-			'name': 'Class War',
-			'time': 'Every Friday At 22:00',
-			'reward': [
-				'2,000,000 CPs',
-				'Top Class',
-				'Show At Website Ranking',
-			],
-		},
-	];
-
-	const booses = [
-		{
-			'name': 'Terato Dragon',
-			'time': 'Every Houre At xx:05',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-		{
-			'name': 'Snow Banshee',
-			'time': 'Every Houre At xx:10',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-		{
-			'name': 'Thrilling Spook',
-			'time': 'Every Houre At xx:15',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-		{
-			'name': 'Sword Master',
-			'time': 'Every Houre At xx:20',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-		{
-			'name': 'Nemesis Tyrant',
-			'time': 'Every Houre At xx:25',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-		{
-			'name': 'Lava Beast',
-			'time': 'Every Houre At xx:30',
-			'reward': [
-				'500,000 CPs',
-				'100 Monster Points',
-			],
-		},
-	];
-
-	const quests = [
-		{
-			'name': 'Conquer Letter',
-			'reward': [
-				'2,000,000 CPs',
-				'GoldPrize',
-				'Top GuildLeader / DeputyLeader',
-			],
-		},
-	];
+	const props = defineProps({
+		serverEvents: Object,
+		bossMonsters: Object,
+		serverQuests: Object,
+	});
 
 </script>

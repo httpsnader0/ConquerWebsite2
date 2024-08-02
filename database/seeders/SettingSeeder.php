@@ -64,7 +64,7 @@ class SettingSeeder extends Seeder
 
     public function setAbout()
     {
-        Settings::set('video', 'https://www.youtube.com/watch?v=LereGnaQmeg');
+        Settings::set('video', 'https://www.youtube.com/embed/LereGnaQmeg');
         Settings::set('abouts', [
             ['title' => ['ar' => 'موعد إفتتاح السيرفر 01/08/2024', 'en' => 'Server Lunched 01/08/2024']],
             ['title' => ['ar' => 'إصدار 6609', 'en' => 'Version 6609']],

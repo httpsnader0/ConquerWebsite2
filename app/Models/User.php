@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use App\Builders\UserBuilder;
-use Illuminate\Notifications\Notifiable;
+use App\Traits\PaginatableTrait;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Silber\Bouncer\Database\HasRolesAndAbilities;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Silber\Bouncer\Database\HasRolesAndAbilities;
 
 class User extends Authenticatable
 {
-    use HasRolesAndAbilities, Notifiable;
+    use HasRolesAndAbilities, Notifiable, PaginatableTrait;
 
     protected $fillable = [
         'name',

@@ -2,7 +2,7 @@
 
 	<AppHead title="Signup" />
 
-	<div class="bg-white p-10 mb-20 shadow-lg rounded-2xl border border-border-light dark:border-border-dark">
+	<div class="panel-content">
 		<form @submit.prevent="submit">
 
 			<FormInput

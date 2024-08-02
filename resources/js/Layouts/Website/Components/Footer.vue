@@ -1,6 +1,6 @@
 <template>
 
-	<footer>
+	<footer class="mt-20">
 
 		<span class="">
 			All Copyright Reservert 2024 -

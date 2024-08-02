@@ -1,6 +1,6 @@
 <template>
 
-	<nav>
+	<nav class="web-menu">
 
 		<img
 			:src="asset($page.props.settings.logo)"

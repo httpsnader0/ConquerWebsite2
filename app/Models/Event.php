@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Builders\EventBuilder;
+use App\Traits\PaginatableTrait;
+use Bl\LaravelUploadable\Casts\FileCast;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Sluggable\HasSlug;
@@ -11,7 +13,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Event extends Model
 {
-    use HasTranslations, HasSlug;
+    use HasTranslations, HasSlug, PaginatableTrait;
 
     public $translatable = [
         'name',
@@ -20,6 +22,7 @@ class Event extends Model
     ];
 
     protected $fillable = [
+        'image',
         'slug',
         'type',
         'name',
@@ -31,6 +34,7 @@ class Event extends Model
     protected function casts(): array
     {
         return [
+            'image' => FileCast::class,
             'is_active' => 'boolean',
         ];
     }

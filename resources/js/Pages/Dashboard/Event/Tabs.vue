@@ -17,15 +17,15 @@
 			ability: Ability.EVENTS_SHOW,
 			label: i18n.t('_Events.Details'),
 			icon: 'info-circle',
-			route: route('dashboard.events.show', props.model.id),
-			active: route().current('dashboard.events.show', props.model.id),
+			route: route('dashboard.events.show', props.model.slug),
+			active: route().current('dashboard.events.show', props.model.slug),
 		},
 		{
 			ability: Ability.EVENTS_UPDATE,
 			label: i18n.t('_Events.Edit'),
 			icon: 'edit',
-			route: route('dashboard.events.edit', props.model.id),
-			active: route().current('dashboard.events.edit', props.model.id),
+			route: route('dashboard.events.edit', props.model.slug),
+			active: route().current('dashboard.events.edit', props.model.slug),
 		},
 	];
 
