@@ -58,10 +58,10 @@ class MenuWebsite
                 'active' => 'website.events.*',
             ],
             [
-                'label' => 'News',
+                'label' => 'Blogs',
                 'icon' => 'newspaper',
-                'route' => route('website.news.index'),
-                'active' => 'website.news.*',
+                'route' => route('website.blogs.index'),
+                'active' => 'website.blogs.*',
             ],
             [
                 'label' => 'Screenshots',

@@ -1,6 +1,6 @@
 <template>
 
-	<AppHead title="Event" />
+	<AppHead :title="event.name + ' - ' + $t('Events')" />
 
 	<div class="w-full grid grid-cols-4 gap-10 px-20 mb-20">
 
@@ -21,6 +21,7 @@
 					>
 						<template #item="{ item }">
 							<Link
+								preserve-scroll
 								:href="route('website.events.show', item.slug)"
 								class="w-full flex justify-start items-center py-3 px-5"
 								:class="{ 'bg-primary text-white': route().current('website.events.show', item.slug) }"
@@ -45,6 +46,7 @@
 					>
 						<template #item="{ item }">
 							<Link
+								preserve-scroll
 								:href="route('website.events.show', item.slug)"
 								class="w-full flex justify-start items-center py-3 px-5"
 								:class="{ 'bg-primary text-white': route().current('website.events.show', item.slug) }"
@@ -69,6 +71,7 @@
 					>
 						<template #item="{ item }">
 							<Link
+								preserve-scroll
 								:href="route('website.events.show', item.slug)"
 								class="w-full flex justify-start items-center py-3 px-5"
 								:class="{ 'bg-primary text-white': route().current('website.events.show', item.slug) }"
@@ -84,7 +87,7 @@
 
 		<div class="panel-content col-span-3">
 
-			<div v-html="event.explain" />
+			<div v-html="event.explain" class="w-full text-center" />
 
 		</div>
 

@@ -28,7 +28,7 @@
 			<template v-if="!isFile">
 
 				<FilePreview
-					:src="filePreview ?? asset('uploadable.jpg')"
+					:src="filePreview ?? asset('images/default.png')"
 					class="w-32 h-32"
 					:isBlack="isBlack"
 				/>

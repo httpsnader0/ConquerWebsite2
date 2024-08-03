@@ -33,8 +33,9 @@ use App\Actions\Website\Event\{
     EventIndexAction,
     EventShowAction,
 };
-use App\Actions\Website\News\{
-    NewsIndexAction,
+use App\Actions\Website\Blog\{
+    BlogIndexAction,
+    BlogShowAction,
 };
 use App\Actions\Website\ScreenShot\{
     ScreenShotIndexAction,
@@ -101,9 +102,10 @@ Route::name('website.')->group(function () {
 
     });
 
-    Route::prefix('news')->name('news.')->group(function () {
+    Route::prefix('blogs')->name('blogs.')->group(function () {
 
-        Route::get('', NewsIndexAction::class)->name('index');
+        Route::get('', BlogIndexAction::class)->name('index');
+        Route::get('{blog}', BlogShowAction::class)->name('show');
 
     });
 

@@ -98,7 +98,9 @@
 			return usePage().props.event.name;
 		} else if (usePage().component.startsWith('Website/Event')) {
 			return 'Event & Tournaments';
-		} else if (usePage().component.startsWith('Website/News')) {
+		} else if (usePage().component.startsWith('Website/Blog/Show')) {
+			return usePage().props.blog.name;
+		} else if (usePage().component.startsWith('Website/Blog')) {
 			return 'Latest News';
 		} else if (usePage().component.startsWith('Website/ScreenShot')) {
 			return 'Screen Shots';

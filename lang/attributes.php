@@ -30,6 +30,7 @@ $attributes = [
     'feature.*.title.*' => __('Title'),
     'feature.*.description.*' => __('Description'),
     'installation.*.title.*' => __('Installation'),
+    'content.*' => __('Content'),
 ];
 
 $values = [

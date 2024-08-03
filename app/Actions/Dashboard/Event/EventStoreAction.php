@@ -32,6 +32,7 @@ class EventStoreAction extends Action
     public function rules(): array
     {
         return [
+            'image' => ['required', 'image', 'max:' . Rules::MAX_AVATAR],
             'type' => ['required', new Enum(EventTypeEnum::class)],
             'name.*' => ['required', 'max:' . Rules::MAX_NAME],
             'time' => ['required', 'max:' . Rules::MAX_NAME],

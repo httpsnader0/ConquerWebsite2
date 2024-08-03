@@ -11,6 +11,7 @@ return [
         ModuleEnum::ADMINS->value => __('Administrators'),
         ModuleEnum::SETTINGS->value => __('Settings'),
         ModuleEnum::EVENTS->value => __('Events'),
+        ModuleEnum::BLOGS->value => __('Blogs'),
     ],
 
     'EventTypeEnum' => [

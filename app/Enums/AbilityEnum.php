@@ -28,6 +28,13 @@ enum AbilityEnum: string {
     case EVENTS_SHOW = 'Events Show';
     case EVENTS_CHANGE_STATUS = 'Events Change Status';
 
+    case BLOGS_INDEX = 'Blogs Index';
+    case BLOGS_CREATE = 'Blogs Create';
+    case BLOGS_UPDATE = 'Blogs Update';
+    case BLOGS_DELETE = 'Blogs Delete';
+    case BLOGS_SHOW = 'Blogs Show';
+    case BLOGS_CHANGE_STATUS = 'Blogs Change Status';
+
     public const PERMISSIONS = [
 
         ['key' => self::ROLES_INDEX, 'module' => ModuleEnum::ROLES],
@@ -51,6 +58,13 @@ enum AbilityEnum: string {
         ['key' => self::EVENTS_DELETE, 'module' => ModuleEnum::EVENTS],
         ['key' => self::EVENTS_SHOW, 'module' => ModuleEnum::EVENTS],
         ['key' => self::EVENTS_CHANGE_STATUS, 'module' => ModuleEnum::EVENTS],
+
+        ['key' => self::BLOGS_INDEX, 'module' => ModuleEnum::BLOGS],
+        ['key' => self::BLOGS_CREATE, 'module' => ModuleEnum::BLOGS],
+        ['key' => self::BLOGS_UPDATE, 'module' => ModuleEnum::BLOGS],
+        ['key' => self::BLOGS_DELETE, 'module' => ModuleEnum::BLOGS],
+        ['key' => self::BLOGS_SHOW, 'module' => ModuleEnum::BLOGS],
+        ['key' => self::BLOGS_CHANGE_STATUS, 'module' => ModuleEnum::BLOGS],
 
     ];
 

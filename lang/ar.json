@@ -132,7 +132,7 @@
     "Reward": "المكافأة",
     "Explain": "الشرح",
     "Reward Name": "اسم المكافأة",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
+    "Content": "المحتوي",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
@@ -533,5 +533,11 @@
         "Create": "إضافة مسابقه",
         "Edit": "تعديل المسابقه",
         "Details": "تفاصيل المسابقه"
+    },
+    "_Blogs": {
+        "Index": "الأخبار",
+        "Create": "إضافة خبر",
+        "Edit": "تعديل الخبر",
+        "Details": "تفاصيل الخبر"
     }
 }

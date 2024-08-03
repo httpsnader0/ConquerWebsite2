@@ -71,6 +71,13 @@ class MenuDashboard
                     'route' => route('dashboard.events.index'),
                     'active' => 'dashboard.events.*',
                 ],
+                [
+                    'ability' => AbilityEnum::BLOGS_INDEX,
+                    'label' => ModuleEnum::BLOGS,
+                    'icon' => 'newspaper',
+                    'route' => route('dashboard.blogs.index'),
+                    'active' => 'dashboard.blogs.*',
+                ],
             ],
         );
     }

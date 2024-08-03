@@ -59,6 +59,16 @@ use App\Actions\Dashboard\Event\{
     EventDeleteAction,
     EventChangeStatusAction,
 };
+use App\Actions\Dashboard\Blog\{
+    BlogIndexAction,
+    BlogCreateAction,
+    BlogStoreAction,
+    BlogShowAction,
+    BlogEditAction,
+    BlogUpdateAction,
+    BlogDeleteAction,
+    BlogChangeStatusAction,
+};
 
 Route::middleware(['guest'])->group(function () {
 
@@ -160,6 +170,19 @@ Route::middleware(['auth'])->group(function () {
         Route::post('{event}', EventUpdateAction::class)->name('update');
         Route::delete('{event}', EventDeleteAction::class)->name('delete');
         Route::get('{event}/change-status', EventChangeStatusAction::class)->name('change-status');
+
+    });
+
+    Route::prefix('blogs')->as('blogs.')->group(function () {
+
+        Route::get('', BlogIndexAction::class)->name('index');
+        Route::get('create', BlogCreateAction::class)->name('create');
+        Route::post('', BlogStoreAction::class)->name('store');
+        Route::get('{blog}', BlogShowAction::class)->name('show');
+        Route::get('{blog}/edit', BlogEditAction::class)->name('edit');
+        Route::post('{blog}', BlogUpdateAction::class)->name('update');
+        Route::delete('{blog}', BlogDeleteAction::class)->name('delete');
+        Route::get('{blog}/change-status', BlogChangeStatusAction::class)->name('change-status');
 
     });
 

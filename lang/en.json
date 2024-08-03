@@ -132,7 +132,7 @@
     "Reward": "Reward",
     "Explain": "Explain",
     "Reward Name": "Reward Name",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
+    "Content": "Content",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
@@ -508,5 +508,11 @@
         "Create": "Create Event",
         "Edit": "Edit Event",
         "Details": "Details Event"
+    },
+    "_Blogs": {
+        "Index": "Blogs",
+        "Create": "Create Blog",
+        "Edit": "Edit Blog",
+        "Details": "Details Blog"
     }
 }

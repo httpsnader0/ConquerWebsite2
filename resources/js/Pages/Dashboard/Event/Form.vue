@@ -23,6 +23,13 @@
 
 			<div class="panel-content">
 
+				<FormFile
+					:label="$t('Image')"
+					:form="form"
+					name="image"
+					:src="model?.image"
+				/>
+
 				<FormSelect
 					:label="$t('Type')"
 					:form="form"
@@ -116,14 +123,13 @@
 
 	</Panel>
 
-	<pre>{{ model?.data?.translation }}</pre>
-
 </template>
 
 <script setup>
 
 	import Tabs from './Tabs.vue';
 	import { useForm } from '@inertiajs/vue3';
+	import FormFile from '@/Components/Form/FormFile.vue';
 	import FormSelect from '@/Components/Form/FormSelect.vue';
 	import FormTranslatable from '@/Components/Form/FormTranslatable.vue';
 	import FormTranslatableEditor from '@/Components/Form/FormTranslatableEditor.vue';
@@ -139,6 +145,7 @@
 	});
 
 	const form = useForm({
+		image: null,
 		type: props.model?.type,
 		name: props.model?.translation?.name ?? { ar: '', en: '' },
 		time: props.model?.translation?.time ?? { ar: '', en: '' },
@@ -147,7 +154,7 @@
 	});
 
 	onBeforeMount(() => {
-		
+
 		if (!Object.keys(props.model).length) {
 			form.rewards.push({
 				rewardName: { ar: '', en: '' },
