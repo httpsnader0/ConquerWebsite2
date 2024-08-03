@@ -16,6 +16,7 @@ class BlogIndexAction extends Action
             'blogs' => BlogResource::collection(
                 Blog::query()
                     ->active()
+                    ->orderByDesc('id')
                     ->paginate(6)
             )->resource
 

@@ -32,6 +32,7 @@ class EventShowAction extends Action
             ->active()
             ->whereType($type)
             ->with(['rewards'])
+            ->orderByDesc('id')
             ->get();
     }
 }

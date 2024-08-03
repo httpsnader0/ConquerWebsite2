@@ -3,6 +3,8 @@
 namespace App\Actions\Website\Home;
 
 use App\Actions\Action;
+use App\Http\Resources\Dashboard\BlogResource;
+use App\Models\Blog;
 use Inertia\Inertia;
 use Rawilk\Settings\Facades\Settings;
 
@@ -25,6 +27,14 @@ class HomeIndexAction extends Action
             'totalVisits' => 0,
 
             'totalOnline' => 0,
+
+            'blogs' => BlogResource::collection(
+                Blog::query()
+                    ->active()
+                    ->orderByDesc('id')
+                    ->take(5)
+                    ->get()
+            ),
 
         ]);
     }

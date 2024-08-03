@@ -31,6 +31,7 @@ class EventIndexAction extends Action
             ->active()
             ->whereType($type)
             ->with(['rewards'])
+            ->orderByDesc('id')
             ->get();
     }
 }

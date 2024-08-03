@@ -16,6 +16,8 @@
 		:totalOnline="totalOnline"
 	/>
 
+	<LastNews :blogs="blogs" />
+
 </template>
 
 <script setup>
@@ -24,6 +26,7 @@
 	import AboutGame from './AboutGame.vue';
 	import GameFeature from './GameFeature.vue';
 	import GameStatic from './GameStatic.vue';
+	import LastNews from './LastNews.vue';
 
 	const props = defineProps({
 		video: String,
@@ -33,6 +36,7 @@
 		totalCharacters: Number,
 		totalVisits: Number,
 		totalOnline: Number,
+		blogs: Object,
 	});
 
 </script>

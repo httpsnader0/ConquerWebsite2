@@ -19,7 +19,8 @@ class BlogResource extends JsonResource
             'slug' => $this->slug,
             'content' => $this->content,
             'isActive' => $this->is_active,
-            'createdAt' => $this->created_at->diffForHumans(),
+            'createdAt' => $this->created_at->translatedFormat('Y-m-d'),
+            // 'createdAt' => $this->created_at->diffForHumans(),
             'updatedAt' => $this->updated_at->diffForHumans(),
             'route' => route('website.blogs.show', $this->slug),
         ];
