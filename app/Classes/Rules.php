@@ -14,7 +14,7 @@ class Rules
     const MAX_PRICE = 999999999999;
     const MAX_IMAGE = 1000;
     const MAX_ICON = 2000;
-    const MAX_AVATAR = 1000;
+    const MAX_AVATAR = 10000;
     const MAX_FILE = 20000;
     const MAX_WEIGHT = 999;
     const MAX_HEIGHT = 999;

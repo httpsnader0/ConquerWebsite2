@@ -29,12 +29,23 @@
 						:options="[
 							{ value: '1', name: $t('Active') },
 							{ value: '0', name: $t('Not Active') },
-						]"	
+						]"
 						name="is_active"
 						:placeholder="$t('Status')"
 					/>
 
 				</template>
+
+				<Column :header="$t('Image')">
+					<template #body="slot">
+						<div class="flex justify-center">
+							<FilePreview
+								:src="slot.data.image"
+								class="w-20"
+							/>
+						</div>
+					</template>
+				</Column>
 
 				<Column :header="$t('Name')">
 					<template #body="slot">
@@ -94,6 +105,7 @@
 	import { ref } from 'vue';
 	import QueryParameters from '@/Classes/QueryParameters';
 	import FilterSelect from "@/Components/Filter/FilterSelect.vue";
+	import FilePreview from '@/Components/Avatar/FilePreview.vue';
 
 	const props = defineProps({
 		tableData: Object,

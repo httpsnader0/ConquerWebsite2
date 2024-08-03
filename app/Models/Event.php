@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Builders\EventBuilder;
+use App\Enums\EventTypeEnum;
 use App\Traits\PaginatableTrait;
 use Bl\LaravelUploadable\Casts\FileCast;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +35,7 @@ class Event extends Model
     protected function casts(): array
     {
         return [
+            'type' => EventTypeEnum::class,
             'image' => FileCast::class,
             'is_active' => 'boolean',
         ];

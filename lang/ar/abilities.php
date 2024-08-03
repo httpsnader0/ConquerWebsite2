@@ -33,4 +33,18 @@ return [
     AbilityEnum::EVENTS_SHOW->value => $show,
     AbilityEnum::EVENTS_CHANGE_STATUS->value => $changeStatus,
 
+    AbilityEnum::BLOGS_INDEX->value => $index,
+    AbilityEnum::BLOGS_CREATE->value => $create,
+    AbilityEnum::BLOGS_UPDATE->value => $update,
+    AbilityEnum::BLOGS_DELETE->value => $delete,
+    AbilityEnum::BLOGS_SHOW->value => $show,
+    AbilityEnum::BLOGS_CHANGE_STATUS->value => $changeStatus,
+
+    AbilityEnum::MEDIA_INDEX->value => $index,
+    AbilityEnum::MEDIA_CREATE->value => $create,
+    AbilityEnum::MEDIA_UPDATE->value => $update,
+    AbilityEnum::MEDIA_DELETE->value => $delete,
+    AbilityEnum::MEDIA_SHOW->value => $show,
+    AbilityEnum::MEDIA_CHANGE_STATUS->value => $changeStatus,
+
 ];

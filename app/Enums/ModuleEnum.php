@@ -10,5 +10,6 @@ enum ModuleEnum: string {
     case SETTINGS = 'Settings';
     case EVENTS = 'Events';
     case BLOGS = 'Blogs';
+    case MEDIA = 'Media';
 
 }

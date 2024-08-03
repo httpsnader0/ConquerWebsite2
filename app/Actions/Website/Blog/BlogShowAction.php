@@ -15,6 +15,15 @@ class BlogShowAction extends Action
 
             'blog' => BlogResource::make($blog),
 
+            'relatedBlogs' => BlogResource::collection(
+                Blog::query()
+                    ->active()
+                    ->where('id', '!=', $blog->id)
+                    ->inRandomOrder()
+                    ->take(3)
+                    ->get()
+            )->resource
+
         ]);
     }
 }

@@ -1,15 +1,15 @@
 <template>
 
-	<AppHead :title="$t('_Blogs.Index')" />
+	<AppHead :title="$t('_Media.Index')" />
 
-	<Panel :title="$t('_Blogs.Index')">
+	<Panel :title="$t('_Media.Index')">
 
 		<template #actions>
 
 			<ActionButton
-				:ability="Ability.BLOGS_CREATE"
-				:label="$t('_Blogs.Create')"
-				:href="route('dashboard.blogs.create')"
+				:ability="Ability.MEDIA_CREATE"
+				:label="$t('_Media.Create')"
+				:href="route('dashboard.media.create')"
 				type="create"
 			/>
 
@@ -36,7 +36,7 @@
 
 				</template>
 
-				<Column :header="$t('Image')">
+				<Column :header="$t('Screenshots Or Videos')">
 					<template #body="slot">
 						<div class="flex justify-center">
 							<FilePreview
@@ -47,21 +47,11 @@
 					</template>
 				</Column>
 
-				<Column :header="$t('Name')">
-					<template #body="slot">
-						<Anchor
-							:ability="Ability.BLOGS_SHOW"
-							:href="route('dashboard.blogs.show', slot.data.slug)"
-							:label="slot.data.name"
-						/>
-					</template>
-				</Column>
-
 				<Column :header="$t('Status')">
 					<template #body="slot">
 						<ToggleButton
-							:ability="Ability.BLOGS_CHANGE_STATUS"
-							:href="route('dashboard.blogs.change-status', slot.data.slug)"
+							:ability="Ability.MEDIA_CHANGE_STATUS"
+							:href="route('dashboard.media.change-status', slot.data.id)"
 							:id="slot.data.id"
 							:name="slot.data.name"
 							:status="slot.data.isActive"
@@ -73,12 +63,12 @@
 					<template #body="slot">
 						<div class="flex justify-center items-center gap-3">
 							<EditButton
-								:ability="Ability.BLOGS_UPDATE"
-								:href="route('dashboard.blogs.edit', slot.data.slug)"
+								:ability="Ability.MEDIA_UPDATE"
+								:href="route('dashboard.media.edit', slot.data.id)"
 							/>
 							<DeleteButton
-								:ability="Ability.BLOGS_DELETE"
-								:href="route('dashboard.blogs.delete', slot.data.slug)"
+								:ability="Ability.MEDIA_DELETE"
+								:href="route('dashboard.media.delete', slot.data.id)"
 								:id="slot.data.id"
 								:name="slot.data.name"
 							/>

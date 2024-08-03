@@ -64,10 +64,10 @@ class MenuWebsite
                 'active' => 'website.blogs.*',
             ],
             [
-                'label' => 'Screenshots',
+                'label' => 'Media',
                 'icon' => 'images',
-                'route' => route('website.screenshots.index'),
-                'active' => 'website.screenshots.*',
+                'route' => route('website.media.index'),
+                'active' => 'website.media.*',
             ],
             [
                 'label' => 'Contact Us',

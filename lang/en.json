@@ -133,8 +133,8 @@
     "Explain": "Explain",
     "Reward Name": "Reward Name",
     "Content": "Content",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
+    "Media": "Media",
+    "Screenshots Or Videos": "Screenshots Or Videos",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
@@ -514,5 +514,11 @@
         "Create": "Create Blog",
         "Edit": "Edit Blog",
         "Details": "Details Blog"
+    },
+    "_Media": {
+        "Index": "Screenshots Or Videos",
+        "Create": "Create Screenshot Or Video",
+        "Edit": "Edit Screenshot Or Video",
+        "Details": "Details Screenshot Or Video"
     }
 }

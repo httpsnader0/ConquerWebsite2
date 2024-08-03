@@ -2,8 +2,18 @@
     @apply w-full;
 }
 
+.no-page-bg {
+    .p-paginator-bottom {
+        @apply border-none;
+
+        .p-paginator {
+            @apply bg-transparent rounded-none p-0;
+        }
+    }
+}
+
 .pi {
-    font-family: 'primeicons' !important;
+    font-family: "primeicons" !important;
 }
 
 .p-fieldset {

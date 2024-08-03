@@ -14,9 +14,9 @@
 		:first="( tableOptions.page - 1 ) * tableOptions.per_page"
 		:layout="layout"
 		:pt="{
+            root: { class: 'no-page-bg' },
             header: { class: 'border-none p-0 mb-5' },
             content: { class: 'bg-transparent' },
-            paginator: { class: 'aaaaaaaaaa' },
         }"
 	>
 		<template #header>

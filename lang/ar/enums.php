@@ -12,6 +12,7 @@ return [
         ModuleEnum::SETTINGS->value => __('Settings'),
         ModuleEnum::EVENTS->value => __('Events'),
         ModuleEnum::BLOGS->value => __('Blogs'),
+        ModuleEnum::MEDIA->value => __('Screenshots Or Videos'),
     ],
 
     'EventTypeEnum' => [

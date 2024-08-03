@@ -35,6 +35,13 @@ enum AbilityEnum: string {
     case BLOGS_SHOW = 'Blogs Show';
     case BLOGS_CHANGE_STATUS = 'Blogs Change Status';
 
+    case MEDIA_INDEX = 'Media Index';
+    case MEDIA_CREATE = 'Media Create';
+    case MEDIA_UPDATE = 'Media Update';
+    case MEDIA_DELETE = 'Media Delete';
+    case MEDIA_SHOW = 'Media Show';
+    case MEDIA_CHANGE_STATUS = 'Media Change Status';
+
     public const PERMISSIONS = [
 
         ['key' => self::ROLES_INDEX, 'module' => ModuleEnum::ROLES],
@@ -65,6 +72,13 @@ enum AbilityEnum: string {
         ['key' => self::BLOGS_DELETE, 'module' => ModuleEnum::BLOGS],
         ['key' => self::BLOGS_SHOW, 'module' => ModuleEnum::BLOGS],
         ['key' => self::BLOGS_CHANGE_STATUS, 'module' => ModuleEnum::BLOGS],
+
+        ['key' => self::MEDIA_INDEX, 'module' => ModuleEnum::MEDIA],
+        ['key' => self::MEDIA_CREATE, 'module' => ModuleEnum::MEDIA],
+        ['key' => self::MEDIA_UPDATE, 'module' => ModuleEnum::MEDIA],
+        ['key' => self::MEDIA_DELETE, 'module' => ModuleEnum::MEDIA],
+        ['key' => self::MEDIA_SHOW, 'module' => ModuleEnum::MEDIA],
+        ['key' => self::MEDIA_CHANGE_STATUS, 'module' => ModuleEnum::MEDIA],
 
     ];
 

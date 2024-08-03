@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             EventSeeder::class,
             BlogSeeder::class,
+            MediaSeeder::class,
         ]);
     }
 }

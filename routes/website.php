@@ -37,8 +37,8 @@ use App\Actions\Website\Blog\{
     BlogIndexAction,
     BlogShowAction,
 };
-use App\Actions\Website\ScreenShot\{
-    ScreenShotIndexAction,
+use App\Actions\Website\Media\{
+    MediaIndexAction,
 };
 use App\Actions\Website\ContactUs\{
     ContactUsIndexAction,
@@ -109,9 +109,9 @@ Route::name('website.')->group(function () {
 
     });
 
-    Route::prefix('screenshots')->name('screenshots.')->group(function () {
+    Route::prefix('media')->name('media.')->group(function () {
 
-        Route::get('', ScreenShotIndexAction::class)->name('index');
+        Route::get('', MediaIndexAction::class)->name('index');
 
     });
 

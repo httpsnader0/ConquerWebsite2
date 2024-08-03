@@ -69,6 +69,16 @@ use App\Actions\Dashboard\Blog\{
     BlogDeleteAction,
     BlogChangeStatusAction,
 };
+use App\Actions\Dashboard\Media\{
+    MediaIndexAction,
+    MediaCreateAction,
+    MediaStoreAction,
+    MediaShowAction,
+    MediaEditAction,
+    MediaUpdateAction,
+    MediaDeleteAction,
+    MediaChangeStatusAction,
+};
 
 Route::middleware(['guest'])->group(function () {
 
@@ -183,6 +193,19 @@ Route::middleware(['auth'])->group(function () {
         Route::post('{blog}', BlogUpdateAction::class)->name('update');
         Route::delete('{blog}', BlogDeleteAction::class)->name('delete');
         Route::get('{blog}/change-status', BlogChangeStatusAction::class)->name('change-status');
+
+    });
+
+    Route::prefix('media')->as('media.')->group(function () {
+
+        Route::get('', MediaIndexAction::class)->name('index');
+        Route::get('create', MediaCreateAction::class)->name('create');
+        Route::post('', MediaStoreAction::class)->name('store');
+        Route::get('{media}', MediaShowAction::class)->name('show');
+        Route::get('{media}/edit', MediaEditAction::class)->name('edit');
+        Route::post('{media}', MediaUpdateAction::class)->name('update');
+        Route::delete('{media}', MediaDeleteAction::class)->name('delete');
+        Route::get('{media}/change-status', MediaChangeStatusAction::class)->name('change-status');
 
     });
 

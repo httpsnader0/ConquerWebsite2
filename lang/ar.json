@@ -133,8 +133,8 @@
     "Explain": "الشرح",
     "Reward Name": "اسم المكافأة",
     "Content": "المحتوي",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
-    "SOON": "SOOOOOOOOOOOOOOOOOOOON",
+    "Media": "Media",
+    "Screenshots Or Videos": "الصور والفيديوهات",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
     "SOON": "SOOOOOOOOOOOOOOOOOOOON",
@@ -539,5 +539,11 @@
         "Create": "إضافة خبر",
         "Edit": "تعديل الخبر",
         "Details": "تفاصيل الخبر"
+    },
+    "_Media": {
+        "Index": "الصور والفديوهات",
+        "Create": "إضافة صوره او فيديو",
+        "Edit": "تعديل صوره او فيديو",
+        "Details": "تفاصيل صوره او فيديو"
     }
 }
