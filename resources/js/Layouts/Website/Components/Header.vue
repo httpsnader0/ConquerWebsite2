@@ -102,8 +102,8 @@
 			return usePage().props.blog.name;
 		} else if (usePage().component.startsWith('Website/Blog')) {
 			return 'Latest News';
-		} else if (usePage().component.startsWith('Website/ScreenShot')) {
-			return 'Screen Shots';
+		} else if (usePage().component.startsWith('Website/Media')) {
+			return 'Media';
 		} else if (usePage().component.startsWith('Website/ContactUs')) {
 			return 'Contact Us';
 		}
