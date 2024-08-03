@@ -2,38 +2,30 @@
 
 	<AppHead title="Ranking" />
 
-	<div class="px-20">
+	<Tabs />
 
-		<Tabs />
+	<div class="panel-content !grid-cols-3">
 
-		<div class="panel-content">
+		<Chart
+			type="doughnut"
+			:data="playerData"
+			:options="chartOptions"
+			class="w-full"
+		/>
 
-			<div class="grid grid-cols-3 gap-5">
+		<Chart
+			type="polarArea"
+			:data="classData"
+			:options="chart2Options"
+			class="w-full"
+		/>
 
-				<Chart
-					type="doughnut"
-					:data="playerData"
-					:options="chartOptions"
-					class="w-full"
-				/>
-
-				<Chart
-					type="polarArea"
-					:data="classData"
-					:options="chart2Options"
-					class="w-full"
-				/>
-
-				<Chart
-					type="doughnut"
-					:data="onlineData"
-					:options="chartOptions"
-					class="w-full"
-				/>
-
-			</div>
-
-		</div>
+		<Chart
+			type="doughnut"
+			:data="onlineData"
+			:options="chartOptions"
+			class="w-full"
+		/>
 
 	</div>
 

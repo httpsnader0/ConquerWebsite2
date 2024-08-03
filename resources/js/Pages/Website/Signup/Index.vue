@@ -2,7 +2,7 @@
 
 	<AppHead title="Signup" />
 
-	<div class="panel-content">
+	<div class="panel-content !inline-block">
 		<form @submit.prevent="submit">
 
 			<FormInput

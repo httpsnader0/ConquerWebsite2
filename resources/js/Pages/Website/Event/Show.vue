@@ -4,7 +4,7 @@
 
 	<div class="w-full grid grid-cols-4 gap-10 px-20 mb-20">
 
-		<div class="panel-content">
+		<div class="panel-content !inline-block">
 			<Accordion :activeIndex="expandKey">
 
 				<AccordionTab
@@ -85,11 +85,10 @@
 			</Accordion>
 		</div>
 
-		<div class="panel-content col-span-3">
-
-			<div v-html="event.explain" class="w-full text-center" />
-
-		</div>
+		<div
+			v-html="event.explain"
+			class="panel-content !inline-block col-span-3 text-center"
+		/>
 
 	</div>
 

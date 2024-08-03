@@ -2,7 +2,7 @@
 
 	<AppHead title="Download" />
 
-	<div class="w-full grid grid-cols-2 gap-5 px-20 mb-20">
+	<div class="w-full grid grid-cols-2 gap-5 mb-20">
 
 		<div class="panel-content">
 

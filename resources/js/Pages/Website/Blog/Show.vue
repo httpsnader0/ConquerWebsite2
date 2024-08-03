@@ -2,7 +2,7 @@
 
 	<AppHead :title="blog.name + ' - ' + $t('Blogs')" />
 
-	<div v-html="blog.content" class="w-full text-center" />
+	<div v-html="blog.content" class="panel-content !inline-block w-full text-center" />
 
 </template>
 

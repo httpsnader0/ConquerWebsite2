@@ -6,7 +6,10 @@
 			v-for="(rank, index) in rankings"
 			:key="index"
 		>
-			<Link :href="route(rank.url)">
+			<Link
+				:href="route(rank.url)"
+				preserve-scroll
+			>
 			<Button
 				:severity="route().current() == rank.url ? 'primary' : 'secondary'"
 				:label="$t(rank.title)"

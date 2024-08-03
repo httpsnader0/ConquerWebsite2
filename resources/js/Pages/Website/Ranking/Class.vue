@@ -2,40 +2,36 @@
 
 	<AppHead title="Top Class" />
 
-	<div class="px-20">
+	<Tabs />
 
-		<Tabs />
+	<div class="panel-content !inline-block">
 
-		<div class="panel-content">
+		<TablePagination
+			:tableData="tableData"
+			:queryParams="queryParams"
+			:search="false"
+			:pagination="false"
+		>
 
-			<TablePagination
-				:tableData="tableData"
-				:queryParams="queryParams"
-				:search="false"
-				:pagination="false"
-			>
+			<Column :header="$t('Rank')">
+				<template #body="slot">
+					{{ slot.data.data }}
+				</template>
+			</Column>
 
-				<Column :header="$t('Rank')">
-					<template #body="slot">
-						{{ slot.data.data }}
-					</template>
-				</Column>
+			<Column :header="$t('Player Name')">
+				<template #body="slot">
+					{{ slot.data.data }}
+				</template>
+			</Column>
 
-				<Column :header="$t('Player Name')">
-					<template #body="slot">
-						{{ slot.data.data }}
-					</template>
-				</Column>
+			<Column :header="$t('Class')">
+				<template #body="slot">
+					{{ slot.data.data }}
+				</template>
+			</Column>
 
-				<Column :header="$t('Class')">
-					<template #body="slot">
-						{{ slot.data.data }}
-					</template>
-				</Column>
-
-			</TablePagination>
-
-		</div>
+		</TablePagination>
 
 	</div>
 
