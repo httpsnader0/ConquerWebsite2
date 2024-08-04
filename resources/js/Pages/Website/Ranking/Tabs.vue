@@ -12,7 +12,7 @@
 			>
 			<Button
 				:severity="route().current() == rank.url ? 'primary' : 'secondary'"
-				:label="$t(rank.title)"
+				:label="rank.title"
 				class=" text-nowrap"
 			/>
 			</Link>

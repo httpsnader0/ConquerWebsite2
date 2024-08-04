@@ -51,6 +51,9 @@ use App\Actions\Website\Login\{
 use App\Actions\Website\Profile\{
     ProfileIndexAction,
 };
+use App\Actions\Website\Player\{
+    PlayerIndexAction,
+};
 
 Route::name('website.')->group(function () {
 
@@ -133,6 +136,12 @@ Route::name('website.')->group(function () {
     Route::prefix('profile')->name('profile.')->group(function () {
 
         Route::get('', ProfileIndexAction::class)->name('index');
+
+    });
+
+    Route::prefix('players')->name('players.')->group(function () {
+
+        Route::get('{UID}', PlayerIndexAction::class)->name('index');
 
     });
 
