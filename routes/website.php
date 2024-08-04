@@ -42,6 +42,7 @@ use App\Actions\Website\Media\{
 };
 use App\Actions\Website\ContactUs\{
     ContactUsIndexAction,
+    ContactUsStoreAction,
 };
 use App\Actions\Website\Login\{
     LoginIndexAction,
@@ -118,6 +119,7 @@ Route::name('website.')->group(function () {
     Route::prefix('contact-us')->name('contact-us.')->group(function () {
 
         Route::get('', ContactUsIndexAction::class)->name('index');
+        Route::post('', ContactUsStoreAction::class)->name('store');
 
     });
 

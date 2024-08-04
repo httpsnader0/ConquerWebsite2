@@ -19,7 +19,7 @@ import Tag from "primevue/tag";
 import TabMenu from "primevue/tabmenu";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
-import Dialog from 'primevue/dialog';
+import Dialog from "primevue/dialog";
 import AppHead from "@/Components/Shared/AppHead.vue";
 import Panel from "@/Components/Shared/Panel.vue";
 import ActionButton from "@/Components/Action/ActionButton.vue";
@@ -178,7 +178,9 @@ import {
     faFilter,
     faSpinner,
     faChevronDown,
-
+    faPhone,
+    faEnvelope,
+    faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faFacebook,
@@ -186,6 +188,8 @@ import {
     faInstagram,
     faYoutube,
     faTiktok,
+    faWhatsapp,
+    faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
     faHouse,
@@ -222,10 +226,15 @@ library.add(
     faFilter,
     faSpinner,
     faChevronDown,
+    faPhone,
+    faEnvelope,
+    faHeart,
 
     faFacebook,
     faTwitter,
     faInstagram,
     faYoutube,
-    faTiktok
+    faTiktok,
+    faWhatsapp,
+    faDiscord
 );

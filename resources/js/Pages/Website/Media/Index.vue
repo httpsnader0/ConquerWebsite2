@@ -20,7 +20,7 @@
 			:circular="true"
 			:showItemNavigators="true"
 			:autoPlay="true"
-			:transitionInterval="300000000"
+			:transitionInterval="3000"
 			containerStyle="max-width: 50%"
 			:pt="{
 				previousItemButton: { class: 'w-24 h-full top-0 m-0 z-10' },

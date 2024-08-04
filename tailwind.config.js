@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 export default {
     darkMode: "class",
@@ -43,6 +43,12 @@ export default {
                     primary: "#040d19",
                     secondary: "#071426",
                 },
+                facebook: { DEFAULT: "#1877F2" },
+                instagram: { DEFAULT: "#E1306C" },
+                youtube: { DEFAULT: "#FF0000" },
+                whatsapp: { DEFAULT: "#25D366" },
+                twitter: { DEFAULT: "#1DA1F2" },
+                discord: { DEFAULT: "#7289DA" },
             },
             backgroundImage: {
                 logo: "url('/public/images/logo.png')",

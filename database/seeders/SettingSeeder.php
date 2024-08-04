@@ -17,13 +17,13 @@ class SettingSeeder extends Seeder
         Settings::set('logo', 'images/logo.png');
         Settings::set('email', 'httpsnader@gmail.com');
         Settings::set('phone', '+201098683990');
-        Settings::set('facebook', 'https://facebook.com/');
-        Settings::set('instagram', 'https://instagram.com/');
-        Settings::set('youtube', 'https://youtube.com/');
-        Settings::set('whatsapp', 'https://whatsapp.com/');
-        Settings::set('github', 'https://github.com/');
-        Settings::set('twitter', 'https://twitter.com/');
-        Settings::set('linkedin', 'https://linkedin.com/');
+        Settings::set('facebook', 'https://facebook.com/official.party.conquer');
+        Settings::set('instagram', 'https://instagram.com/party.conquer');
+        Settings::set('youtube', 'https://youtube.com/@_httpsnader');
+        Settings::set('whatsapp', 'https://wa.me/+201098683990');
+        Settings::set('twitter', 'https://x.com/PartyC93694');
+        Settings::set('discord', 'https://discord.gg/WG4XevM3Da');
+        Settings::set('discordWidget', 'https://discordapp.com/widget?id=1269359936136286309');
 
         $this->setSlider();
         $this->setAbout();

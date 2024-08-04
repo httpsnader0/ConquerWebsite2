@@ -3,13 +3,13 @@
 namespace App\Actions\Dashboard\Auth;
 
 use App\Actions\Action;
-use App\Http\Requests\Dashboard\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use Lorisleiva\Actions\ActionRequest;
 
 class LoginStoreAction extends Action
 {
-    public function handle(LoginRequest $request)
+    public function handle(ActionRequest $request)
     {
         Auth::guard('web')->attempt($request->validated(), true);
 
@@ -25,5 +25,13 @@ class LoginStoreAction extends Action
         toastr(__('Login Successfully'));
 
         return redirect()->intended(route('dashboard.home.index'));
+    }
+
+    public function rules()
+    {
+        return [
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ];
     }
 }

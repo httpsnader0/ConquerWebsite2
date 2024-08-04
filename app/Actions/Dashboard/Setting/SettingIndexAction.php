@@ -21,6 +21,24 @@ class SettingIndexAction extends Action
 
             'logo' => Settings::get('logo'),
 
+            'email' => Settings::get('email'),
+
+            'phone' => Settings::get('phone'),
+
+            'facebook' => Settings::get('facebook'),
+
+            'instagram' => Settings::get('instagram'),
+
+            'youtube' => Settings::get('youtube'),
+
+            'whatsapp' => Settings::get('whatsapp'),
+
+            'twitter' => Settings::get('twitter'),
+
+            'discord' => Settings::get('discord'),
+
+            'discordWidget' => Settings::get('discordWidget'),
+
         ]);
     }
 }
